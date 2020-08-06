@@ -97,7 +97,8 @@ public final class SelectHandler {
 			SelectIdentity.response(c, stmt, offset, orgName);
 			break;
             case ServerParseSelect.SELECT_VAR_ALL:
-				c.execute(stmt, ServerParse.SELECT);
+				//c.execute(stmt, ServerParse.SELECT);
+				SelectVariables.execute(c,stmt);
 				break;
 			case ServerParseSelect.SESSION_TX_READ_ONLY:
 				SelectTxReadOnly.response(c);
